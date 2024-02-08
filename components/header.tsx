@@ -5,17 +5,17 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
 
-import User from "@/components/user"
+import User from "@/components/User"
 import { Separator } from "./ui/separator"
-import Menu from "@/components/menu"
-import MailsFilter from "@/components/mailsFilter"
+import Menu from "@/components/Menu"
+import MailsFilter from "@/components/MailsFilter"
 import { useContext, useEffect, useState } from "react"
 import UserContext from "./UserProvider"
-import MailList from "@/components/mailList"
-import MailDetail from "./mailDetail"
-import ContactDetail from "./contactDetail"
-import ContactsNames from "./contactsNames"
-import StarredList from "./staredList"
+import MailList from "@/components/MailList"
+import MailDetail from "./MailDetail"
+import ContactDetail from "./ContactDetail"
+import ContactsNames from "./ContactsNames"
+import StarredList from "./StaredList"
 
 function Header() {
   const { active, setActive, selectedMail } = useContext(UserContext);
