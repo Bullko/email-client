@@ -5,7 +5,7 @@ import {
   } from "@/components/ui/toggle-group"
   import { Separator } from './ui/separator'
 
-const toggle = () => {
+const Toggle = () => {
   return (
     
     <ToggleGroup type="single">
@@ -21,4 +21,4 @@ const toggle = () => {
   )
 }
 
-export default toggle
+export default Toggle

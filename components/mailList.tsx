@@ -18,7 +18,7 @@ interface MailListProps {
   // other props...
 }
 
-const mailList = ({ ...otherProps }: MailListProps) => {
+const MailList = ({ ...otherProps }: MailListProps) => {
 
     const {active, setSelectedMail, selectedMail, setLastPage, lastPage, mails, setMails} = useContext(UserContext);
     
@@ -106,4 +106,4 @@ const mailList = ({ ...otherProps }: MailListProps) => {
   )
 }
 
-export default mailList
+export default MailList

@@ -17,7 +17,7 @@ import {
 
 import UserContext from './UserProvider';
 
-const menu = () => {
+const Menu = () => {
 
     const { active, setActive, mails } = useContext(UserContext)
     const [isCollapsed, setIsCollapsed] = useState<boolean | null>(null);
@@ -134,4 +134,4 @@ const menu = () => {
     )
 }
 
-export default menu
+export default Menu

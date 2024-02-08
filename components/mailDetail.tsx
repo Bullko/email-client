@@ -27,7 +27,7 @@ interface MailDetailProps {
   // other props...
 }
 
-function mailDetail({ ...otherProps }: MailDetailProps) {
+function MailDetail({ ...otherProps }: MailDetailProps) {
     const {selectedMail, setSelectedMail,} = useContext(UserContext)
 
 
@@ -135,4 +135,4 @@ if (!selectedMail) {
   )
 }
 
-export default mailDetail
+export default MailDetail

@@ -48,7 +48,7 @@ import {
 
 
 
-const contactDetail = () => {
+const ContactDetail = () => {
 
   const { selectedContact, setSelectedContact, contacts } = useContext(UserContext)
   const [name, setName] = useState(selectedContact ? selectedContact.name : "");
@@ -228,4 +228,4 @@ const contactDetail = () => {
   )
 }
 
-export default contactDetail
+export default ContactDetail

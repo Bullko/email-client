@@ -11,7 +11,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import UserContext from './UserProvider'
 
-const contactsNames = () => {
+const ContactsNames = () => {
   const { selectedContact, setSelectedContact, contacts } = useContext(UserContext)
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -64,4 +64,4 @@ const contactsNames = () => {
   )
 }
 
-export default contactsNames
+export default ContactsNames

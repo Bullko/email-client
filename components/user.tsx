@@ -17,7 +17,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
-const user = () => {
+const User = () => {
 
   const { user: initialUser, userMail, lastName: initialLastName } = useContext(UserContext) as { user: string, userMail: string, lastName: string }
   const [user, setUser] = useState(initialUser)
@@ -119,4 +119,4 @@ const user = () => {
   )
 }
 
-export default user
+export default User

@@ -11,7 +11,7 @@ import { mails } from "@/app/data"
 import UserContext from './UserProvider'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 
-const starredList = () => {
+const StarredList = () => {
     const {active, setSelectedMail, selectedMail} = useContext(UserContext);
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
@@ -76,4 +76,4 @@ const starredList = () => {
   )
 }
 
-export default starredList
+export default StarredList
