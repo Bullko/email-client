@@ -22,6 +22,13 @@ import {
 
 import UserContext from './UserProvider'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 
 interface MailDetailProps {
   // other props...
@@ -68,15 +75,42 @@ if (!selectedMail) {
     <div className='flex flex-col w-full h-full'>
     <div className="h-[50px] p-2 flex justify-between justify-items-center items-center align-middle w-full">
         <div className='flex'>
-            <Button variant="ghost">
-                <ArchiveBoxIcon className="w-4 h-4"/>
-            </Button>
-            <Button variant="ghost">
-                <ArchiveBoxXMarkIcon className="w-4 h-4"/>
-            </Button>
-            <Button variant="ghost">
-                <TrashIcon className="w-4 h-4"/>
-            </Button>
+              <TooltipProvider delayDuration={0}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button variant="ghost">
+                      <ArchiveBoxIcon className="w-4 h-4"/>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className='text-xs'>Archive</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider delayDuration={0}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button variant="ghost">
+                      <ArchiveBoxXMarkIcon className="w-4 h-4"/>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className='text-xs'>Move to junk</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider delayDuration={0}>
+                <Tooltip>
+                  <TooltipTrigger>
+                  <Button variant="ghost">
+                    <TrashIcon className="w-4 h-4"/>
+                  </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className='text-xs'>Move to trash</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
         </div>
         <div className='flex'>
             <Button variant="ghost"><ArrowUturnLeftIcon className="w-4 h-4"/></Button>

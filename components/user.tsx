@@ -45,7 +45,7 @@ const User = () => {
         resizeObserver.disconnect();
       };
     }
-  }, [panelRef.current]);
+  }, []);
 
 
   function initials() {

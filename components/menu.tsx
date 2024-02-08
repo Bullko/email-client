@@ -47,7 +47,10 @@ const Menu = () => {
                         <InboxIcon className="w-5 h-5 " />
                         {isCollapsed ? "" : <a className="ml-2 text-s">Inbox</a>}
                     </div>
+                    <div className='flex'>
+                    {isCollapsed ? "" : <p className='pr-2'>{Math.abs(mails.filter(mail => mail.read).length - mails.length)} /</p>}
                     {isCollapsed ? "" : <p className='pr-2'>{mails.length}</p>}
+                    </div>
                 </li>
                 <li className={`flex items-center  ${isCollapsed? "justify-center" : "justify-between"} p-2 ${active === 'starred' ? 'active-li' : ''}`}
                     onClick={() => setActive("starred")}
