@@ -3,7 +3,7 @@ import UserContext from './UserProvider';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Input } from './ui/input';
 import { Label } from './ui/label';
-import { ThemeToggle } from './themeToggle';
+import { ThemeToggle } from './ThemeToggle';
 import { Separator } from './ui/separator';
 import { Button } from './ui/button';
 import { useToast } from "@/components/ui/use-toast"
