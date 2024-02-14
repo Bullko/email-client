@@ -32,7 +32,7 @@ const MailList = ({ ...otherProps }: MailListProps) => {
         setSelectedMail(null)
       }
      }
-    }, []);
+    }, [lastPage, setLastPage, setSelectedMail]);
 
     useEffect(()=>{
       const results = mails.filter(mails=>

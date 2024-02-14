@@ -19,15 +19,20 @@ import StarredList from "./StaredList"
 
 function Header() {
   const { active, setActive, selectedMail } = useContext(UserContext);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const formatActiveText = (text: string) => {
     return text.charAt(0).toUpperCase() + text.slice(1)
   }
 
   useEffect(() => {
+    // This function now safely checks for window since useEffect runs on the client
+    const checkIsSmallScreen = () => window.innerWidth <= 600;
+    // Immediately update isSmallScreen based on the current window width
+    setIsSmallScreen(checkIsSmallScreen());
+
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 600);
+      setIsSmallScreen(checkIsSmallScreen());
     };
 
     window.addEventListener('resize', handleResize);

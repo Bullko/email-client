@@ -21,7 +21,7 @@ const ContactsNames = () => {
       contact.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results as any);
-  }, [searchTerm]);
+  }, [searchTerm, contacts]);
 
   const handleChange = (event: any) => {
     setSearchTerm(event.target.value);

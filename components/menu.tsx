@@ -36,7 +36,7 @@ const Menu = () => {
               resizeObserver.disconnect();
             };
           }
-    }, [menuRef.current])
+    }, [])
 
     return (
         <nav className='pl-2 pr-2' ref={menuRef}>
