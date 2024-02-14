@@ -2,6 +2,8 @@
 
 This is my first project in [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+LIVE DEMO: [Email-client](https://email-client-test.vercel.app/)
+
 The first time I did it in typescript and at the same time tried [tailwind](https://tailwindcss.com/) and components from [shadcn](https://ui.shadcn.com/).
 
 As an example, I took the look of the [email](https://ui.shadcn.com/examples/mail) client from shadcn. I built the client from the ground up and for example from shadcn I only used data from emails.
